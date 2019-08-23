@@ -6,7 +6,7 @@ int main()
 {
 	here:
 	int n;
-	float first=0.0,last,mid,mid_1;
+	int first=0,last,mid,sqrt1;
 	char c;
 	clock_t  start,end;
 	cout<<"Enter the number:";
@@ -20,27 +20,23 @@ int main()
 			mid = (first+last)/2;
 			if((mid*mid) == n)
 			{
-				cout<<"Square root:"<<mid<<endl;
+				sqrt1 = mid;
 				break;
 			}
 			else if((mid*mid) > n)
 			{
-				last = mid+1;
+				last = mid-1;
 			}
 			else if((mid*mid)<n)
 			{
-				mid_1 = mid;
-				while((mid_1*mid_1)<n)
-				{
-					mid_1++;
-					}
-					first = floor(mid_1);
-				cout<<"Floored sqrt:"<<first<<endl;	
-				break;
+				first = mid+1;
+				sqrt1=mid;
+				
 			}
 
 		}
-		cout<<"Do you want to continue?(y/n):"
+		cout<<"Square root:"<<sqrt1<<endl;
+		cout<<"Do you want to continue?(y/n):";
 			cin>>c;
 		if(c=='y')
 			goto here;
