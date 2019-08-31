@@ -3,7 +3,7 @@
 using namespace std;
 int main()
 {
-	int a[10],n,k,i,j,count=0;
+	int a[10],n,k,i,j,count=0,count1=0;
 	clock_t start,end;
 	cout<<"Enter no. of elements:";
 	cin>>n;
@@ -20,12 +20,13 @@ int main()
 					int temp = a[j];
 					a[j]=a[j+1];
 					a[j+1]=temp;
-					count++;
+					count1++;
 				}
 			}
+		count++;
 	}
 	end=clock();
-	cout<<"Count:"<<count<<endl;
+	cout<<"Count:"<<count*count1<<endl;
 	float exe= float(end-start)/CLOCKS_PER_SEC;
 	cout<<exe;
 	
