@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int grid[4][4];
+int grid[100][100];
 int N,SQN;
 bool usedInRow(int row,int num){
     for(int col=0;col<N;col++){
@@ -58,8 +58,9 @@ bool solveSuduko(){
     return false;
 }
 int main(){
-    cout<<"Enter Sudoku elements:";
+    cout<<"Enter Sudoku size(perfect square within 100):";
     cin>>N;
+    cout<<"\nEnter Sudoku elements:";
     for(int i=0;i<N;i++){
         for(int j=0;j<N;j++){
             cin>>grid[i][j];
@@ -96,7 +97,8 @@ int main(){
 
 /*
 OUTPUT 1:
-Enter Sudoku elements:4
+Enter Sudoku size(perfect square within 100):4
+Enter Sudoku elements:
 1 0 3 0
 4 0 2 0
 3 0 1 0
@@ -115,7 +117,8 @@ Solution:
 2 1 4 3
 
 OUTPUT 2:
-Enter Sudoku elements:4
+Enter Sudoku size(perfect square within 100):4
+Enter Sudoku elements:
 1 0 3 0
 2 0 4 0
 3 0 1 0
@@ -129,4 +132,41 @@ Sudoku
 
 Solution:
 No Solution
+
+
+OUTPUT 3:
+Enter Sudoku size(perfect square within 100):9
+Enter Sudoku elements:
+1 0 3 0 5 0 7 0 9
+0 5 0 7 0 9 0 2 0
+7 0 9 0 2 0 4 0 6
+0 1 0 3 0 5 0 9 0
+3 0 5 0 9 0 2 0 4
+8 9 7 2 1 4 3 6 5
+0 3 0 6 0 2 0 7 0
+6 4 2 9 7 8 5 3 1
+9 7 8 5 3 1 6 4 2
+
+Sudoku
+1 0 3 0 5 0 7 0 9
+0 5 0 7 0 9 0 2 0
+7 0 9 0 2 0 4 0 6
+0 1 0 3 0 5 0 9 0
+3 0 5 0 9 0 2 0 4
+8 9 7 2 1 4 3 6 5
+0 3 0 6 0 2 0 7 0
+6 4 2 9 7 8 5 3 1
+9 7 8 5 3 1 6 4 2
+
+Solution:
+1 2 3 4 5 6 7 8 9
+4 5 6 7 8 9 1 2 3
+7 8 9 1 2 3 4 5 6
+2 1 4 3 6 5 8 9 7
+3 6 5 8 9 7 2 1 4
+8 9 7 2 1 4 3 6 5
+5 3 1 6 4 2 9 7 8
+6 4 2 9 7 8 5 3 1
+9 7 8 5 3 1 6 4 2
+
 */
