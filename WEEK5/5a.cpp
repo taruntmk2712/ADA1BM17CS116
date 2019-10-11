@@ -77,7 +77,7 @@ int main(){
     
     bool t = solveSuduko();
     cout<<endl;
-    Solution:
+    cout<<"Solution:";
     if(t){
      for(int i=0;i<N;i++){
         for(int j=0;j<N;j++){
