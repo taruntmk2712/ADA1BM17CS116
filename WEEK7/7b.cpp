@@ -20,6 +20,7 @@ for (i = 0; i <= n; i++)
 				K[i][j] = K[i-1][j]; 
 	} 
 } 
+cout<<"\n";
   for(int i=0;i<=n;i++){
         for(int j=0;j<=W;j++){
             cout<<K[i][j]<<"\t";
@@ -27,9 +28,9 @@ for (i = 0; i <= n; i++)
         cout<<"\n";
     }
 int res = K[n][W];     
-    cout<<"Maximum Profit: "<<res<<endl;
+    cout<<"\nMaximum Profit: "<<res<<endl;
     j = W; 
-	cout<<"Weights of items included: ";
+	cout<<"Weights of items included:\n";
     for (i = n; i > 0 && res > 0; i--)  
 	{    
         if (res == K[i - 1][j])  
@@ -49,48 +50,43 @@ int main()
 	cin>>n;
 	cout<<"\n";
 	for(int i=0;i<n;i++){
-		cout<<"Enter the weight"<<i+1<<":"<<endl;	
+		cout<<"Enter the weight "<<i+1<<":";	
 		cin>>wt[i];
 	}
+	cout<<"\n";
 	for(int i=0;i<n;i++)
 	{
-		cout<<"Enter the values"<<i+1<<":"<<endl;
+		cout<<"Enter the values "<<i+1<<":";
 		cin>>val[i];
 	}
-	cout<<"Max capacity: "<<endl;
+	cout<<"\nMax capacity:";
 	cin>>W;
 	knapSack(W, wt, val, n); 
 	return 0; 
 } 
-/*
-OUTPUT:
+/*OUTPUT:
 Enter the no of items:4
 
-Enter the weight1:
-2
-Enter the weight2:
-1
-Enter the weight3:
-3
-Enter the weight4:
-2
-Enter the values1:
-12
-Enter the values2:
-10
-Enter the values3:
-20
-Enter the values4:
-15
-Max capacity: 
-5
-0	0	  0	  0	  0	  0	
-0	0	  12	12	12	12	
+Enter the weight 1:2
+Enter the weight 2:1
+Enter the weight 3:3
+Enter the weight 4:2
+
+Enter the values 1:12
+Enter the values 2:10
+Enter the values 3:20
+Enter the values 4:15
+
+Max capacity:5
+
+0	0	0	0	0	0	
+0	0	12	12	12	12	
 0	10	12	22	22	22	
 0	10	12	22	30	32	
 0	10	15	25	30	37	
+
 Maximum Profit: 37
-Weights of items included: 
+Weights of items included:
 4->2
 2->1
 1->2
