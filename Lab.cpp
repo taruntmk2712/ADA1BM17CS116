@@ -37,7 +37,7 @@ void findSubset(int set[], int size, int sum)
 
 int main() 
 { 
-	int weights[30],target,size;
+    int weights[30],target,size;
     cout<<"Enter no. of weights :";
     cin>>size;
     for(int i=0;i<size;i++)
