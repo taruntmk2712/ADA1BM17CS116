@@ -38,7 +38,7 @@ void printSolution(int dist[][V])
 		} 
 		cout<<endl; 
 	} 
-
+}
 int main() 
 {
 	int graph[V][V] = { {0, 5, INF, 10}, 
