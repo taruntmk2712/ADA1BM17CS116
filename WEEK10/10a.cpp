@@ -12,7 +12,7 @@ int minDistance(int dist[], bool sptSet[])
 	return min_index; 
 } 
  
-int printSolution(int dist[]) 
+void printSolution(int dist[]) 
 { 
 	printf("Vertex \t\t Distance from Source\n"); 
 	for (int i = 0; i < V; i++) 
